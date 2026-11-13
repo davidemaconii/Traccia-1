@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body {
+	background-color: lightblue;
+	font-family: Arial;
+	text-align: center;
+	
+}
+
+img{
+	width: 150px;
+	hight: auto;
+}
+
+h1{
+	margin: auto;
+	width: 600px;
+	color: white;
+	background-color: cornflowerblue;
+}
+
+h2{
+	text-decoration: underline;
+	font-family: Redaction;
+	color: blue;
+}
+
+table {
+			
+			margin: auto;
+			width: 600px;
+			border: 2px solid blue;
+			background-color: white;
+		}
+		
+		td {
+			border: 1px dotted black;
+		}	
+		
+		.sx{ /*formattazione celle della colonna sinistra */
+		width: 35%;
+		background-color: azure;
+		}
+		
+		.dx{ /*formattazione celle della colonna destra */
+		width: 65%;
+		}
+		
+		.casella{ /* formattazione dei componenti del form */
+			font-family: arial;
+			color: black;
+			background-color: white;
+			accent-color: blue; 
+		}
+		
+		.casella:focus{ /* formattazione del componente del form che si sta compilando */
+		outline: none; /* tolgo l'arrotondamente del bordo */
+		}
+		
+		textarea {
+			resize: none; /* impedisco la deformazione della textarea */
+		}
+fieldset{
+	width: 620px;
+	margin: auto;
+	background-color: white;
+	border: 2px solid blue;
+	margin-bottom: 20px;
+	
+	
+}
+legend {
+	background-color: lightgrey;
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+	color: blue;
+	
+}		
+placeholder{
+	background-color: azure;
+}

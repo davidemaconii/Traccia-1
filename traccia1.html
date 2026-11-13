@@ -1,0 +1,148 @@
+<!doctype html>
+<html> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>Modulo</title> 
+	<link href="traccia1.css" rel="stylesheet" /> 
+	<style> /* il CSS che immetto qui, funziona soltato su pagina HTML */ 
+		
+	</style>
+</head>
+<body> 
+	<form method="post" action="mailto:info.davidemaconii@gmail.com" enctype="multipart/form-data" name="form1" id="form1">
+		<!-- method: come i dati immessi nel form devo transitare fuori dalla pagina HTML corrente.
+			 action: la pagina web dove inviare il form, o un indirizzo e-mail.
+			 anctype(facoltativo): da usare se il form prevede allegati.
+			 name,id: identificativi del form, utili se la pagina ha più form.-->
+	<img src="accademia.png" />	
+	<h1>ACCADEMY FUTURE</h1>
+	<h2>Modulo di iscrizione ai corsi</h2>
+		
+		<fieldset> <!-- set di campi del form con uno scopo comune -->
+			<legend> Dati anagrafici</legend>
+		<table>
+			<tbody>
+				<tr>
+					<td class="sx">Nome</td>
+					<td class="dx"><input class="casella" type="text" name="nome" id="nome" placeholder="Scrivi il tuo nome" /></td> <!-- casella di testo: se immetto il mio nome, il form lo spedirà "nome:Davide" -->
+				</tr>
+				<tr>
+					<td class="sx">Cognome</td>
+					<td class="dx"><input class="casella" type="text" name="cognome" id="cognome" required placeholder="Scrivi il tuo cognome" /></td>
+				</tr>
+				<tr>
+					<td class="sx">Genere</td>
+					<td class="dx">
+						<input class="casella" type="radio" name="genere" id="genere" value="m"/>Maschio | 
+						<input class="casella" type="radio" name="genere" id="genere" value="f"/>Femmina | 
+						<input class="casella" type="radio" name="genere" id="genere" value="a" checked/>Altro</td> <!-- i radio della stessa richiesta devono condividere il name -->					
+				</tr>
+				
+				<tr>
+					<td class="sx">Data di nascita</td>
+					<td class="dx"><input type="date" name="Data" id="Data" /> 
+				</tr>
+				<tr>
+					<td class="sx">Comune di nascita</td>
+					<td class="dx"><input type="text" name="Comune" id="Comune" placeholder="Scrivi il tuo comune..."/> 
+				</tr>
+				<tr>
+					<td class="sx">Provincia di nascita</td>
+					<td class="dx"><input type="text" name="Provincia" id="Provincia" placeholder="Scrivi la tua provincia..." /> 
+				</tr>
+				<tr>
+					<td class="sx">Codice fiscale</td>
+					<td class="dx"><input type="text" name="codice_fiscale" maxlength="16" placeholder="Scrivi il tuo codice fiscale..." />
+				</tr>
+				
+				</tbody>
+				
+		</table>
+		</fieldset>	
+		
+		<fieldset>
+			<legend>Dati di contatto</legend>
+				<table>
+				<tr>
+					<td class="sx">E-mail</td>
+					<td class="dx"><input type="email" placeholder="Scrivi il tuo indirizzo..." size="32" />
+				</tr>
+				<tr>
+					<td class="sx">Telefono</td>
+					<td class="dx"><input type="tel" name="telefono" placeholder="Scrivi il tuo recapito telefonico..." size="32" />
+				</tr>
+				</table>
+		
+		</fieldset>
+<fieldset>
+	<legend>Scelta del corso</legend>
+	<table>
+			<tbody>
+			
+			<tr>
+					<td class="sx">Corso di formaziome</td>
+					<td class="dx">
+						<select name="corsi" class="corso">
+							<option class="corso" selected hidden=true>Seleziona un corso<option>
+							<option class="corso" value="Cu">Cucina</option>
+							<option class="corso" value="Dp">Doppiaggio</option>
+							<option class="corso" value="Ag">Arti grafiche</option>
+							<option class="corso" value="In">Informatica</option>
+							<option class="corso" value="Fo">Fotografia</option>
+						
+						</select>
+				</tr>
+				<tr>
+					<td class="sx">Sede del corso</td>
+					<td class="dx">
+						<input class="casella" type="radio" name="sede" value="cg" checked />Milano |
+						<input class="casella" type="radio" name="sede" value="cv" />Roma <br />
+						<input class="casella" type="radio" name="sede" value="cn" />Napoli |
+						<input class="casella" type="radio" name="sede" value="ve" />Bari
+				</tr>
+				
+
+</tbody>
+</table>
+</fieldset>
+<fieldset>
+	<legend>Situazione patrimoniale</legend>
+	<table>
+			<tbody>
+			
+			<tr>
+					<td class="sx">Reddito annuo familiare</td>
+					<td class="dx">
+						<select name="redditofamiliare" class="reddito">
+							<option class="reddito" selected hidden=true>Seleziona fascia di reddito<option>
+							<option class="reddito" value="Cu">Meno di €15.000 </option>
+							<option class="reddito" value="Dp">da €15.000 a €30.000 </option>
+							<option class="reddito" value="Ag">Oltre €30.000</option>
+							
+						</select>
+				</tr>
+				<tr>
+					<td class="sx">Richiesta agevolazione</td>
+					<td class="dx">
+						<input class="casella" type="checkbox" name="sconto" value="30%" />Richiedo lo sconto del 30% </td>					
+				</tr>
+</tbody>
+</table>
+</fieldset>
+		<tfoot>
+				<tr>
+					<td class="sx">&nbsp;</td>
+					<td class="dx">
+						<input class="casella" type="submit" value="Invia iscrizione" /> <!-- invio del form predefinito  -->
+						<input class="casella" type="reset" value="Cancella" />
+					
+				</tr>
+				
+			</tfoot>
+	</form>
+
+	
+	
+	
+</body>
+</html> 
